@@ -1,5 +1,6 @@
 from django.db import models
 from django.shortcuts import reverse
+from django.utils import timezone
 
 # Create your models here.
 TYPE_CHOICES = (
@@ -32,6 +33,18 @@ class YieldData(models.Model):
 
     def __str__(self):
         return str(self.date.year) + "-" + str(self.date.month) + "-" + str(self.date.day) + " - is_inverted: " + str(self.is_inverted)
+
+    def yd_inversion_string_short(self):
+        if self.date.date() == timezone.now().date():
+            if self.is_inverted:
+                return "The Yield Curve is inverted"
+            else:
+                return "The Yield Curve is not inverted"
+        else:
+            if self.is_inverted:
+                return "On " + self.date.strftime("%B %d, %Y") + " the Yield Curve was inverted"
+            else:
+                return "On " + self.date.strftime("%B %d, %Y") + " the Yield Curve was not inverted"
 
     def get_absolute_url(self):
         year = self.date.year
@@ -82,7 +95,7 @@ class YieldData(models.Model):
 
 
 class YieldComp(models.Model):
-    yield_data = models.ForeignKey(YieldData)
+    yield_data = models.ForeignKey(YieldData, related_name="yield_comps")
     date = models.DateTimeField('Date for Treasury Yield Data')
     rate_type = models.CharField(max_length=4, default="DTYCR", choices=TYPE_CHOICES)
     source_url = models.URLField(max_length=250, null=True, blank=True)
