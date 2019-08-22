@@ -1,0 +1,128 @@
+{% load tz %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="Details on the United States Treasury Yield Curve Data and whether the yield curve is inverted.">
+    <meta name="Keywords" content="Yield Curve,Treasury,Yield,Curve,Inverted,Recession,economy,economics,Finance,Investment">
+
+    <link rel="shortcut icon" type="image/png" href=""/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% load static %}
+
+    <title>{{ title }}</title>
+    <meta name="title" content="{{ title }}"/>
+    <meta name="description"  content="{{ description }}"/>
+
+
+    {% block social_share %}
+    {% endblock social_share %}
+
+    {% block additional_header %}
+    {% endblock additional_header %}
+
+<style>
+
+body{
+  background-color: #f2f2f2;
+}
+
+.page-footer{
+  z-index: 605;
+  position: relative;
+}
+
+
+.container{
+  width: 85%;
+}
+
+
+i.dismiss{
+  cursor: pointer;
+}
+i.link{
+  cursor: pointer;
+  color: #000000de;
+}
+i.link:hover{
+color: blue;
+}
+
+.border-top{
+  border-top: 1px solid #00000024;
+  padding-top:10px;
+}
+.text-block{
+  margin:0px 20px;
+  padding-bottom: 10px;
+}
+
+.footnote{
+  font-size: .8rem;
+  color: #808080;
+  font-style: italic;
+  padding: 0 .75rem;
+}
+
+.section-note{
+  color: #808080;
+  font-style: italic;
+  margin-top:0rem;
+}
+
+
+</style>
+
+</head>
+
+  <body>
+
+        <main role="main" class="col s12 pt-3">
+
+            {% block contents %}{% endblock contents %}
+            {% block extra_content %}{% endblock extra_content %}
+
+        </main>
+      <!--</br>-->
+
+<footer class='page-footer blue-grey darken-3'>
+  <div class="container">
+    <div class="row">
+      <div class="col l4 s12">
+        <h5 class="white-text">Quick Links</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="" >About</a></li>
+          <li><a class="grey-text text-lighten-3" href="" >FAQs</a></li>
+          <li><a class="grey-text text-lighten-3" href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="col l6 offset-l2 s12">
+        <h5 class="white-text">State of The Yield Curve</h5>
+          <p class="grey-text text-lighten-4">State of The Yield Curve provides daily updates on the current state of the yield curve: whether the yield curve is inverted, how it's inverted, and how long it has been inverted (or not). All data is sourced from the <a href ="https://www.treasury.gov/">U.S. Treasury</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+        © 2019 Copyright <i>The Dev Lunchbox</i>
+      <a class="grey-text text-lighten-4 right" href="#!">(v1)</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+
+    {% block additional_js %}
+    {% endblock additional_js %}
+
+  </body>
+</html>
