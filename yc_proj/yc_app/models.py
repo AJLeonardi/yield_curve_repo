@@ -64,17 +64,18 @@ class YieldData(models.Model):
             st_rate = sty[1]
             st_label = sty[0]
 
-            for lty in yd_lt_list:
-                lt_rate = lty[1]
-                yc_diff = lt_rate - st_rate
-                is_yc_inverted = (yc_diff < 0)
-                yc = YieldComp(yield_data=self, date=self.date, rate_type=self.rate_type, source_url=self.source_url,
-                               long_term_yield_value=lt_rate, long_term_yield_label=lty[0],
-                               short_term_yield_value=st_rate, short_term_yield_label=st_label,
-                               yield_comp_difference=yc_diff, is_inverted=is_yc_inverted)
-                yc.save()
+            if len(yd_lt_list) > 0:
+                for lty in yd_lt_list:
+                    lt_rate = lty[1]
+                    yc_diff = lt_rate - st_rate
+                    is_yc_inverted = (yc_diff < 0)
+                    yc = YieldComp(yield_data=self, date=self.date, rate_type=self.rate_type, source_url=self.source_url,
+                                   long_term_yield_value=lt_rate, long_term_yield_label=lty[0],
+                                   short_term_yield_value=st_rate, short_term_yield_label=st_label,
+                                   yield_comp_difference=yc_diff, is_inverted=is_yc_inverted)
+                    yc.save()
 
-            del yd_lt_list[0]
+                del yd_lt_list[0]
 
     class Meta:
         ordering = ['-date']
@@ -97,4 +98,4 @@ class YieldComp(models.Model):
     is_inverted = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.short_term_yield_label + ":" + self.long_term_yield_label + " = " + str(self.yield_comp_difference)
+        return str(self.date) + " - " + self.short_term_yield_label + " : " + self.long_term_yield_label + " = " + str(self.yield_comp_difference)
