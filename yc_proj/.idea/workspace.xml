@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2652df9-ea78-4d67-8d44-5aa81f4a210f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/yc_data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yc_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +51,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yc_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+            <state relative-caret-position="709">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -224,12 +220,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566266331442</updated>
-      <workItem from="1566266333604" duration="8520000" />
+      <workItem from="1566266333604" duration="8594000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8520000" />
+    <option name="totallyTimeSpent" value="8594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="24" y="23" width="1646" height="961" extended-state="0" />
@@ -325,8 +321,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/yc_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+        <state relative-caret-position="709">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

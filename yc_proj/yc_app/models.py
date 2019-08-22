@@ -97,4 +97,4 @@ class YieldComp(models.Model):
     is_inverted = models.BooleanField(default=False)
 
     def __str__(self):
-        return short_term_yield_label + ":" + long_term_yield_label + " = " + str(self.yield_comp_difference)
+        return self.short_term_yield_label + ":" + self.long_term_yield_label + " = " + str(self.yield_comp_difference)
