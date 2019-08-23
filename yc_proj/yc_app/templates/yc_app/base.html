@@ -81,7 +81,27 @@ color: blue;
 </head>
 
   <body>
+ <header>
+      <div class="navbar-fixed">
+        <nav class='blue-grey darken-4'>
+          <div class="nav-wrapper">
+              <a href="" class="brand-logo center hide-on-small-only">{{yd.date|date:'M d, Y'}}</a>
+              <a href="" class="brand-logo center hide-on-med-and-up">{{yd.date|date:'n/d/y'}}</a>
+              <ul class="left">
+                  <li>
+                    <a class='btn btn-small' href="">< Prev</a>
+                  </li>
+              </ul>
 
+              <ul class="right">
+                  <li>
+                    <a class='btn btn-small' href="">Next ></a>
+                  </li>
+              </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
         <main role="main" class="col s12 pt-3">
 
             {% block contents %}{% endblock contents %}
