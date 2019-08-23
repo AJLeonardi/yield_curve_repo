@@ -1,5 +1,24 @@
 {% extends "yc_app/base.html" %}
 
 {% block contents %}
-    <p>{{ yd }} | {{ yd_inversion_string_short }}</p>
+    <h2 class="center">{{ yd_inversion_string_short }}</h2>
+    <table>
+        <thead>
+          <tr>
+              {% for d in yd.yield_data_tup_list %}
+                <th>{{ d.0 }}</th>
+              {% endfor %}
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            {% for d in yd.yield_data_tup_list %}
+                <td>{{ d.1 }}</td>
+            {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+
+
 {% endblock contents %}

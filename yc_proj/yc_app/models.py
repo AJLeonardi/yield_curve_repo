@@ -12,7 +12,7 @@ TYPE_CHOICES = (
 class YieldData(models.Model):
     treasury_id = models.IntegerField(unique=True)
     date = models.DateTimeField('Date for Treasury Yield Data')
-    rate_type = models.CharField(max_length=4, default="DTYCR", choices=TYPE_CHOICES)
+    rate_type = models.CharField(max_length=10, default="DTYCR", choices=TYPE_CHOICES)
 
     is_inverted = models.BooleanField(default=False)
     data_source = models.CharField(max_length=100, default="U.S. Treasury")
@@ -35,7 +35,13 @@ class YieldData(models.Model):
         return str(self.date.year) + "-" + str(self.date.month) + "-" + str(self.date.day) + " - is_inverted: " + str(self.is_inverted)
 
     def yd_inversion_string_short(self):
-        if self.date.date() == timezone.now().date():
+        try:
+            self.get_next_by_date()
+            is_latest = False
+        except YieldData.DoesNotExist:
+            is_latest = True
+
+        if is_latest:
             if self.is_inverted:
                 return "The Yield Curve is inverted"
             else:
@@ -48,8 +54,8 @@ class YieldData(models.Model):
 
     def get_absolute_url(self):
         year = self.date.year
-        month = self.date.month
-        day = self.date.day
+        month = self.date.strftime('%m')
+        day = self.date.strftime('%d')
         return reverse('yc_app:daily_data', args=[year, month, day])
 
     def yield_data_list(self):

@@ -89,20 +89,20 @@ color: blue;
               <a href="" class="brand-logo center hide-on-med-and-up">{{yd.date|date:'n/d/y'}}</a>
               <ul class="left">
                   <li>
-                    <a class='btn btn-small' href="">< Prev</a>
+                    <a class='btn btn-small {% if is_first_yd %}disabled{% endif %}' href="{{ prev_yd_url }}">< Prev</a>
                   </li>
               </ul>
 
               <ul class="right">
                   <li>
-                    <a class='btn btn-small {% if is_latest_yd %}disabled{% endif %}' href="">Next ></a>
+                    <a class='btn btn-small {% if is_latest_yd %}disabled{% endif %}' href="{{ next_yd_url }}">Next ></a>
                   </li>
               </ul>
           </div>
         </nav>
       </div>
     </header>
-        <main role="main" class="col s12 pt-3">
+        <main role="main" class="container">
 
             {% block contents %}{% endblock contents %}
             {% block extra_content %}{% endblock extra_content %}
