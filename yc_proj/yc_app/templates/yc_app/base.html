@@ -28,7 +28,30 @@
 <style>
 
 body{
-  background-color: #f2f2f2;
+    /*background-color: #f2f2f2;*/
+    /*background-color: #0053a2;*/
+    background-color: #ffffff;
+}
+
+footer p a{
+    color: #4fc3f7;
+}
+footer p a:hover{
+    color: #00b0ff;
+}
+.strong{
+    font-weight: bolder;
+}
+.no-margin{
+    margin: 0rem;
+}
+.small-padding{
+    padding-top:0.5rem;
+    padding-bottom:0.5rem;
+}
+.large-padding{
+    padding-top:1rem;
+    padding-bottom:1rem;
 }
 
 .page-footer{
@@ -83,16 +106,15 @@ color: blue;
   <body>
  <header>
       <div class="navbar-fixed">
-        <nav class='blue-grey darken-4'>
+        <nav class='light-blue darken-4'>
           <div class="nav-wrapper">
-              <a href="" class="brand-logo center hide-on-small-only">{{yd.date|date:'M d, Y'}}</a>
-              <a href="" class="brand-logo center hide-on-med-and-up">{{yd.date|date:'n/d/y'}}</a>
+              <a href="" class="brand-logo center hide-on-small-only grey-text text-lighten-3">{{yd.date|date:'M d, Y'}}</a>
+              <a href="" class="brand-logo center hide-on-med-and-up grey-text text-lighten-3">{{yd.date|date:'n/d/y'}}</a>
               <ul class="left">
                   <li>
                     <a class='btn btn-small {% if is_first_yd %}disabled{% endif %}' href="{{ prev_yd_url }}">< Prev</a>
                   </li>
               </ul>
-
               <ul class="right">
                   <li>
                     <a class='btn btn-small {% if is_latest_yd %}disabled{% endif %}' href="{{ next_yd_url }}">Next ></a>
@@ -102,7 +124,7 @@ color: blue;
         </nav>
       </div>
     </header>
-        <main role="main" class="container">
+        <main role="main" class="">
 
             {% block contents %}{% endblock contents %}
             {% block extra_content %}{% endblock extra_content %}
@@ -110,7 +132,7 @@ color: blue;
         </main>
       <!--</br>-->
 
-<footer class='page-footer blue-grey darken-3'>
+<footer class='page-footer  light-blue darken-3'>
   <div class="container">
     <div class="row">
       <div class="col l4 s12">

@@ -15,7 +15,7 @@ class YieldData(models.Model):
     rate_type = models.CharField(max_length=10, default="DTYCR", choices=TYPE_CHOICES)
 
     is_inverted = models.BooleanField(default=False)
-    data_source = models.CharField(max_length=100, default="U.S. Treasury")
+    data_source = models.CharField(max_length=100, default="U.S. Department of the Treasury")
     source_url = models.URLField(max_length=250, null=True, blank=True)
 
     one_month_yield = models.DecimalField(max_digits=6, decimal_places=2, default=0)
@@ -48,9 +48,9 @@ class YieldData(models.Model):
                 return "The Yield Curve is not inverted"
         else:
             if self.is_inverted:
-                return "On " + self.date.strftime("%B %d, %Y") + " the Yield Curve was inverted"
+                return "The Yield Curve was inverted on " + self.date.strftime("%B %d, %Y")
             else:
-                return "On " + self.date.strftime("%B %d, %Y") + " the Yield Curve was not inverted"
+                return "The Yield Curve was not inverted on " + self.date.strftime("%B %d, %Y")
 
     def get_absolute_url(self):
         year = self.date.year

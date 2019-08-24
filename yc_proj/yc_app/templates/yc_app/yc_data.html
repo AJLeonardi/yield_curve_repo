@@ -1,24 +1,38 @@
 {% extends "yc_app/base.html" %}
 
 {% block contents %}
-    <h2 class="center">{{ yd_inversion_string_short }}</h2>
-    <table>
-        <thead>
-          <tr>
-              {% for d in yd.yield_data_tup_list %}
-                <th>{{ d.0 }}</th>
-              {% endfor %}
-          </tr>
-        </thead>
+    <section class="grey-text text-darken-3 valign-wrapper">
+        <div class="container ">
+            <div class="row"></div>
+            <div class="row">
+                <h2 class="center no-margin large-padding">{{ yd_inversion_string_short }}</h2>
+            </div>
+            <div class="row"></div>
+        </div>
+    </section>
+    <section class="grey-text text-darken-3">
+        <div class="container">
+            <div class="row"></div>
+            <div class="row">
+                <h5 class="no-margin large-padding">{{yd.get_rate_type_display}}</h5>
+            </div>
+            <div class="row">
+                {% for d in yd.yield_data_tup_list %}
+                    <div class="center col s1 strong">{{ d.0 }}</div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                {% for d in yd.yield_data_tup_list %}
+                    <div class="center col s1">{{ d.1 }}</div>
+                {% endfor %}
+            </div>
+            <span class="helper-text right"><a href="{{ yd.source_url }}">**Source: {{ yd.data_source }}</a></span>
+            <div class="row"></div>
+        </div>
+    </section>
+    <section class="grey-text text-darken-3">
 
-        <tbody>
-          <tr>
-            {% for d in yd.yield_data_tup_list %}
-                <td>{{ d.1 }}</td>
-            {% endfor %}
-          </tr>
-        </tbody>
-      </table>
+    </section>
 
 
 {% endblock contents %}
