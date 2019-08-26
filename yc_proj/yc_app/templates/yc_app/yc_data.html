@@ -32,6 +32,7 @@
     </section>
     <section class="grey-text text-darken-3">
         <div class="container border-top">
+            <div class="row"></div>
             <div class="row">
                 <h5 class="no-margin large-padding">Yield Curve Comparison Grid</h5>
             </div>
@@ -39,8 +40,8 @@
                 {% for row in yd_comp_grid %}
                     <div class="row">
                         {% for comp in row %}
-                            <div class="col s1 center">
-                            {{ comp }}
+                            <div class="col s1 center {% if comp.is_header %}strong{% endif %}">
+                            {{ comp.label }}
                             </div>
                             {% endfor %}
                     </div>

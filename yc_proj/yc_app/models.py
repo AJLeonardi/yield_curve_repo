@@ -78,19 +78,42 @@ class YieldData(models.Model):
 
     def get_comp_grid(self):
         comp_list = self.yield_comps.all()
-        header = ["None","2M", "3M", "6M", "1Y", "2Y", "3Y", "5Y", "7Y", "10Y", "20Y", "30Y"]
+        header = [None,"2M", "3M", "6M", "1Y", "2Y", "3Y", "5Y", "7Y", "10Y", "20Y", "30Y"]
         durations = ["1M","2M", "3M", "6M", "1Y", "2Y", "3Y", "5Y", "7Y", "10Y", "20Y", "30Y"]
-        grid = [header]
+        first_row = []
+        for h in header:
+            if h is None:
+                label = ""
+            else:
+                label = h
+            first_row.append({
+                'label': label,
+                'object': None,
+                'is_header': True,
+            })
+        grid = [first_row]
         for std in durations:
-            if std is not None:
-                row = [std]
+            if std is not None and std is not "30Y":
+                row = [{
+                    'label': std,
+                    'object': None,
+                    'is_header': True,
+                }]
                 for ltd in durations:
                     if ltd is not None and ltd is not "1M":
                         try:
                             comp = comp_list.get(short_term_yield_label=std, long_term_yield_label=ltd)
-                            row.append(comp)
+                            row.append({
+                                'label': str(comp),
+                                'object': comp,
+                                'is_header': False,
+                                })
                         except:
-                            row.append(None)
+                            row.append({
+                                'label': "--",
+                                'object': None,
+                                'is_header': False,
+                            })
                 grid.append(row)
         return grid
 
