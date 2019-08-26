@@ -22,6 +22,7 @@ def get_yd_by_date(date):
 
 
 def get_yd_from_treasury():
+    # ToDo: kwargs year month and day -- if none passed, just use today's date
     url = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=month(NEW_DATE)%20eq%208%20and%20year(NEW_DATE)%20eq%202019"
     response = urllib.request.urlopen(url).read()
     root = ET.fromstring(response)
@@ -50,7 +51,12 @@ def get_yd_from_treasury():
         yd.twenty_year_yield = Decimal(prop.find('d:BC_20YEAR', ns).text)
         yd.thirty_year_yield = Decimal(prop.find('d:BC_30YEAR', ns).text)
 
-        # yd.is_inverted =
-        print(yd)
+        yd.is_inverted = yd.determine_if_inverted()
+
+        try:
+            yd.save()
+            yd.create_comps()
+        except Exception as e:
+            print(e)
 
     return True

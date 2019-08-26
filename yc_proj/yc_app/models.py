@@ -116,5 +116,8 @@ class YieldComp(models.Model):
 
     is_inverted = models.BooleanField(default=False)
 
+    class Meta:
+        unique_together = ('rate_type', 'date', 'short_term_yield_label', 'long_term_yield_label')
+
     def __str__(self):
         return str(self.date) + " - " + self.short_term_yield_label + " : " + self.long_term_yield_label + " = " + str(self.yield_comp_difference)
