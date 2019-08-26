@@ -23,7 +23,7 @@ def get_yd_by_date(date):
 
 def get_yd_from_treasury():
     # ToDo: kwargs year month and day -- if none passed, just use today's date
-    url = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=month(NEW_DATE)%20eq%208%20and%20year(NEW_DATE)%20eq%202019"
+    url = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=year(NEW_DATE)%20eq%202018"
     response = urllib.request.urlopen(url).read()
     root = ET.fromstring(response)
     ns = {
@@ -38,6 +38,7 @@ def get_yd_from_treasury():
 
         yd.source_url = url
 
+        # ToDo: sometimes these are null. so this needs to accommodate for that.
         yd.one_month_yield = Decimal(prop.find('d:BC_1MONTH', ns).text)
         yd.two_month_yield = Decimal(prop.find('d:BC_2MONTH', ns).text)
         yd.three_month_yield = Decimal(prop.find('d:BC_3MONTH', ns).text)
