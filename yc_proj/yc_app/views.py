@@ -28,7 +28,7 @@ def get_context(request, yd):
         context['is_first_yd'] = True
 
     context['yd_inversion_string_short'] = yd.yd_inversion_string_short()
-    context['yd_comps'] = yd.yield_comps.all()
+    context['yd_comp_grid'] = yd.get_comp_grid()
 
     return context
 

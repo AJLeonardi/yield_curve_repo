@@ -39,6 +39,7 @@ footer p a{
 footer p a:hover{
     color: #00b0ff;
 }
+
 .strong{
     font-weight: bolder;
 }
@@ -62,6 +63,7 @@ footer p a:hover{
 
 .container{
   width: 85%;
+
 }
 
 
@@ -138,9 +140,10 @@ color: blue;
       <div class="col l4 s12">
         <h5 class="white-text">Quick Links</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="" >About</a></li>
-          <li><a class="grey-text text-lighten-3" href="" >FAQs</a></li>
-          <li><a class="grey-text text-lighten-3" href="">Privacy Policy</a></li>
+            <li><a class="grey-text text-lighten-3" href="{% url 'yc_app:index' %}" >Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="" >About</a></li>
+            <li><a class="grey-text text-lighten-3" href="" >FAQs</a></li>
+            <li><a class="grey-text text-lighten-3" href="">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="col l6 offset-l2 s12">
