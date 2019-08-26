@@ -77,7 +77,7 @@ class YieldData(models.Model):
         return not (sorted_list == yield_data_list)
 
     def get_comp_grid(self):
-        comp_list = self.yield_comps.all()
+        comp_list = list(self.yield_comps.all())
         header = [None,"2M", "3M", "6M", "1Y", "2Y", "3Y", "5Y", "7Y", "10Y", "20Y", "30Y"]
         durations = ["1M","2M", "3M", "6M", "1Y", "2Y", "3Y", "5Y", "7Y", "10Y", "20Y", "30Y"]
         first_row = []
@@ -92,27 +92,38 @@ class YieldData(models.Model):
                 'is_header': True,
             })
         grid = [first_row]
+
         for std in durations:
             if std is not None and std is not "30Y":
                 row = [{
                     'label': std,
                     'object': None,
                     'is_header': True,
+                    'state': 'header',
                 }]
                 for ltd in durations:
                     if ltd is not None and ltd is not "1M":
                         try:
-                            comp = comp_list.get(short_term_yield_label=std, long_term_yield_label=ltd)
+                            comp = [x for x in comp_list if x.short_term_yield_label == std and  x.long_term_yield_label == ltd][0]
+                            if comp.is_inverted:
+                                state = "inverted"
+                            elif comp.yield_comp_difference == 0:
+                                state = "even"
+                            else:
+                                state = "normal"
+
                             row.append({
                                 'label': str(comp),
                                 'object': comp,
                                 'is_header': False,
+                                'state': state,
                                 })
-                        except:
+                        except Exception as e:
                             row.append({
                                 'label': "--",
                                 'object': None,
                                 'is_header': False,
+                                'state': "na",
                             })
                 grid.append(row)
         return grid

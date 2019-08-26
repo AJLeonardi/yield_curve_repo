@@ -26,6 +26,11 @@ SECRET_KEY = 'sg&^eji*h@9dlmcsc45tfn9j0u!ouj40yhn)eqm2@0iaf3(^c2'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
+]
 
 
 # Application definition
@@ -38,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'yc_app',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -48,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'yc_proj.urls'
@@ -117,5 +124,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+STATIC_ROOT = BASE_DIR + '/Static/'
 STATIC_URL = '/static/'
