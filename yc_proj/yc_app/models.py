@@ -64,12 +64,12 @@ class YieldData(models.Model):
                 self.seven_year_yield, self.ten_year_yield, self.twenty_year_yield, self.thirty_year_yield]
 
     def yield_data_tup_list(self):
-        return [("1M", self.one_month_yield or '--'), ("2M", self.two_month_yield or '--'),
-                ("3M", self.three_month_yield or '--'), ("6M", self.six_month_yield or '--'),
-                ("1Y", self.one_year_yield or '--'), ("2Y", self.two_year_yield or '--'),
-                ("3Y", self.three_year_yield or '--'), ("5Y", self.five_year_yield or '--'),
-                ("7Y", self.seven_year_yield or '--'), ("10Y", self.ten_year_yield or '--'),
-                ("20Y", self.twenty_year_yield or '--'), ("30Y", self.thirty_year_yield or '--')]
+        return [("1M", self.one_month_yield), ("2M", self.two_month_yield),
+                ("3M", self.three_month_yield), ("6M", self.six_month_yield),
+                ("1Y", self.one_year_yield), ("2Y", self.two_year_yield),
+                ("3Y", self.three_year_yield), ("5Y", self.five_year_yield),
+                ("7Y", self.seven_year_yield), ("10Y", self.ten_year_yield),
+                ("20Y", self.twenty_year_yield), ("30Y", self.thirty_year_yield)]
 
     def determine_if_inverted(self):
         yield_data_list = self.yield_data_list()

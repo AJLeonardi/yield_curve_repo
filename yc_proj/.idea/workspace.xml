@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2652df9-ea78-4d67-8d44-5aa81f4a210f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/yc_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc_app/templates/yc_app/fetch_treasury_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/fetch_treasury_data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,10 +62,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/yc_app/helpers.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="732">
+                <state relative-caret-position="685">
                   <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
                   <folding>
                     <element signature="e#0#35#0" expanded="true" />
@@ -85,11 +83,16 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/yc_app/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
-                  <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+                <state relative-caret-position="496">
+                  <caret line="66" column="73" lean-forward="true" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
+                  <caret line="67" column="75" selection-start-line="67" selection-start-column="75" selection-end-line="67" selection-end-column="75" />
+                  <caret line="68" column="71" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
+                  <caret line="69" column="74" lean-forward="true" selection-start-line="69" selection-start-column="74" selection-end-line="69" selection-end-column="74" />
+                  <caret line="70" column="74" lean-forward="true" selection-start-line="70" selection-start-column="74" selection-end-line="70" selection-end-column="74" />
+                  <caret line="71" column="79" lean-forward="true" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -152,11 +155,11 @@
         <option value="$PROJECT_DIR$/yc_app/templates/yc_app/yc_data.html" />
         <option value="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" />
         <option value="$PROJECT_DIR$/yc_app/helpers.py" />
-        <option value="$PROJECT_DIR$/yc_app/models.py" />
         <option value="$PROJECT_DIR$/yc_app/urls.py" />
         <option value="$PROJECT_DIR$/yc_app/forms.py" />
         <option value="$PROJECT_DIR$/yc_app/templates/yc_app/fetch_treasury_data.html" />
         <option value="$PROJECT_DIR$/yc_app/views.py" />
+        <option value="$PROJECT_DIR$/yc_app/models.py" />
       </list>
     </option>
   </component>
@@ -266,12 +269,12 @@
       <workItem from="1566816391441" duration="8618000" />
       <workItem from="1566829469796" duration="1523000" />
       <workItem from="1566850182194" duration="2858000" />
-      <workItem from="1566868688277" duration="5460000" />
+      <workItem from="1566868688277" duration="5709000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43286000" />
+    <option name="totallyTimeSpent" value="43535000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1646" height="961" extended-state="0" />
@@ -328,16 +331,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yc_app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="71" column="16" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/yc_data.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -375,13 +368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/fetch_treasury_data.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yc_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="709">
@@ -392,12 +378,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/fetch_treasury_data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yc_app/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
+        <state relative-caret-position="685">
           <caret line="58" column="60" selection-start-line="58" selection-start-column="60" selection-end-line="58" selection-end-column="60" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yc_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="66" column="73" lean-forward="true" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
+          <caret line="67" column="75" selection-start-line="67" selection-start-column="75" selection-end-line="67" selection-end-column="75" />
+          <caret line="68" column="71" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
+          <caret line="69" column="74" lean-forward="true" selection-start-line="69" selection-start-column="74" selection-end-line="69" selection-end-column="74" />
+          <caret line="70" column="74" lean-forward="true" selection-start-line="70" selection-start-column="74" selection-end-line="70" selection-end-column="74" />
+          <caret line="71" column="79" lean-forward="true" selection-start-line="71" selection-start-column="79" selection-end-line="71" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
