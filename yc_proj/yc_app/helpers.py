@@ -21,9 +21,14 @@ def get_yd_by_date(date):
             return YieldData.objects.filter(date__date__gte=date).order_by("date")[0]
 
 
-def get_yd_from_treasury():
+def get_yd_from_treasury(year, month=None, day=None ):
     # ToDo: kwargs year month and day -- if none passed, just use today's date
-    url = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=year(NEW_DATE)%20eq%202019"
+    url = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=year(NEW_DATE)%20eq%20" + str(year)
+    if month:
+        url += "%20and%20month(NEW_DATE)%20eq%20" + str(month)
+        if day:
+            url += "%20and%20day(NEW_DATE)%20eq%20" + str(day)
+    print(url)
     response = urllib.request.urlopen(url).read()
     root = ET.fromstring(response)
     ns = {
@@ -44,6 +49,7 @@ def get_yd_from_treasury():
             yd.one_month_yield = Decimal(omy)
         else:
             yd.one_month_yield = None
+
         tmy = prop.find('d:BC_2MONTH', ns).text
         if tmy:
             yd.two_month_yield = Decimal(tmy)
