@@ -58,6 +58,26 @@ def daily_data(request, year, month, day):
                                                                          'day': current_yd.date.strftime('%d')}))
 
 
+def comp_page(request, comp_id, **kwargs):
+    if 'range' in kwargs:
+        date_range = kwargs['range']
+    else:
+        date_range = 365
+    sty_label, lty_label, chart_list = helpers.get_comp_chart_list(comp_id, date_range)
+    chart_data = []
+    for comp in chart_list:
+        comp_tup = comp.date.strftime("%m/%d/%Y"), comp.yield_comp_difference
+        chart_data.append(comp_tup)
+    context = {
+        "chart_label": "Yield Comparison " + sty_label + ":" + lty_label,
+        "chart_data": chart_data,
+        "sty_label": sty_label,
+        "lty_label": lty_label,
+    }
+    return render(request, 'yc_app/comp_chart.html', context)
+
+
+
 class FetchTreasuryData(LoginRequiredMixin, View):
 
     def get(self, request):

@@ -1,7 +1,8 @@
-from yc_app.models import YieldData
+from yc_app.models import YieldData, YieldComp
 import urllib.request
+import datetime
 from decimal import Decimal
-from datetime import datetime
+import datetime
 import xml.etree.ElementTree as ET
 
 
@@ -76,3 +77,13 @@ def get_yd_from_treasury(year, month=None, day=None ):
             print(e)
 
     return True
+
+
+def get_comp_chart_list(comp_id, num_days_of_data):
+    comp = YieldComp.objects.get(pk=comp_id)
+    start_date = comp.date - datetime.timedelta(days=num_days_of_data)
+    return comp.short_term_yield_label, comp.long_term_yield_label, list(YieldComp.objects.filter(date__gte=start_date,
+                                                                                                  date__lte=comp.date,
+                                                                                                  rate_type=comp.rate_type,
+                                                                                                  long_term_yield_label=comp.long_term_yield_label,
+                                                                                                  short_term_yield_label=comp.short_term_yield_label).order_by('date'))

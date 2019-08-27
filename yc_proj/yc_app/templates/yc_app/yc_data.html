@@ -41,7 +41,7 @@
                     <div class="row">
                         {% for comp in row %}
                             <div class="col s1 center {% if comp.is_header %}strong{% endif %} {% if comp.state == 'na' %}na-yc-comp{% elif comp.state == 'even' %}even-yc-comp{% elif comp.state == 'normal' %}normal-yc-comp{% elif comp.state == 'inverted' %}inverted-yc-comp{% endif %}">
-                            {{ comp.label }}
+                            {% if comp.drill_down_url %}<a href="{{ comp.drill_down_url }}">{% endif %}{{ comp.label }}{% if comp.drill_down_url %}</a>{% endif %}
                             </div>
                             {% endfor %}
                     </div>

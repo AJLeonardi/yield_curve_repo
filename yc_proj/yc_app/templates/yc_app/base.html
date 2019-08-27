@@ -41,14 +41,23 @@ footer p a:hover{
     color: #00b0ff;
 }
 
-.inverted-yc-comp{
-    color: red;
+.inverted-yc-comp a{
+    color: red !important;
 }
-.even-yc-comp{
+.even-yc-comp a{
     /*color: yellow;*/
 }
-.normal-yc-comp{
+.normal-yc-comp a{
     color: green;
+}
+.inverted-yc-comp a:hover{
+    color: #039be5;
+}
+.even-yc-comp a:hover{
+    color: #039be5;
+}
+.normal-yc-comp a:hover{
+    color: #039be5;
 }
 .na-yc-comp{
     color: #cfd8dc;
@@ -177,10 +186,8 @@ color: blue;
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-<script>
 
     {% block additional_js %}
     {% endblock additional_js %}
-</script>
   </body>
 </html>

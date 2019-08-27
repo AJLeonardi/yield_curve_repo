@@ -1,0 +1,86 @@
+{% extends "yc_app/base.html" %}
+
+{% block contents %}
+
+    <div id='dashboard' class='row'>
+      <div  class="col s12">
+      </br>
+          <div class="row">
+            <div class="col s12">
+              <label for="CompDataOverTime" class='card-label'>
+                <span>Treasury Yield Comparison for {{ sty_label }} and {{ lty_label }}</span>
+              </label>
+              <div class="card-panel">
+                <canvas id="CompDataOverTime"></canvas>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+{% endblock contents %}
+
+{% block additional_js %}
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js'></script>
+    <script>
+
+    var timeFormat = 'MM/DD/YYYY';
+    var config_comp_data_over_time = {
+			type: 'bar',
+			data: {
+				datasets: [{
+					label: "{{ chart_label }}",
+					/*backgroundColor: color(window.chartColors.red).alpha(0.5).rgbString(),
+					borderColor: window.chartColors.red,*/
+					data: [
+                            {% for x, y in chart_data %}
+                                {x: "{{x}}", y: {{y}} },
+                            {% endfor %}
+                        ],
+					type: 'line',
+					pointRadius: 0,
+					fill: 'origin',
+					lineTension: 0,
+					borderWidth: 2
+				}]
+			},
+			options: {
+				scales: {
+					xAxes: [{
+						type: 'time',
+						distribution: 'series',
+						ticks: {
+							source: 'data',
+							autoSkip: true
+						}
+					}],
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Yield Rate Diff'
+						}
+					}]
+				},
+				tooltips: {
+					intersect: false,
+					mode: 'index',
+					callbacks: {
+						label: function(tooltipItem, myData) {
+							var label = myData.datasets[tooltipItem.datasetIndex].label || '';
+							if (label) {
+								label += ': ';
+							}
+							label += parseFloat(tooltipItem.value).toFixed(2);
+							return label;
+						}
+					}
+				}
+			}
+		};
+
+    var ctx = document.getElementById("CompDataOverTime").getContext('2d');
+    var myChart = new Chart(ctx, config_comp_data_over_time);
+
+    </script>
+
+{% endblock additional_js %}

@@ -102,6 +102,7 @@ class YieldData(models.Model):
                     'object': None,
                     'is_header': True,
                     'state': 'header',
+                    'drill_down_url': False,
                 }]
                 for ltd in durations:
                     if ltd is not None and ltd is not "1M":
@@ -119,6 +120,7 @@ class YieldData(models.Model):
                                 'object': comp,
                                 'is_header': False,
                                 'state': state,
+                                'drill_down_url': comp.get_absolute_url(),
                                 })
                         except Exception as e:
                             row.append({
@@ -126,6 +128,7 @@ class YieldData(models.Model):
                                 'object': None,
                                 'is_header': False,
                                 'state': "na",
+                                'drill_down_url': False,
                             })
                 grid.append(row)
         return grid
@@ -177,3 +180,7 @@ class YieldComp(models.Model):
 
     def __str__(self):
         return str(self.yield_comp_difference)
+
+    def get_absolute_url(self):
+        comp_id = self.pk
+        return reverse('yc_app:comp_chart', args=[comp_id])
