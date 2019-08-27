@@ -1,5 +1,6 @@
 import datetime
 import yc_app
+from yc_app import forms
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.core.urlresolvers import reverse
@@ -61,7 +62,12 @@ class FetchTreasuryData(LoginRequiredMixin, View):
 
     def get(self, request):
         context = get_context(request, None)
+        context['form'] = forms.FetchTreasuryDataForm()
         return render(request, 'yc_app/fetch_treasury_data.html', context)
 
     def post(self, request):
-        pass
+        form = forms.FetchTreasuryDataForm(request.POST or None)
+        if form.is_valid():
+            helpers.get_yd_from_treasury(form.cleaned_data['year'], month=form.cleaned_data['month'],
+                                         day=form.cleaned_data['day'])
+        return HttpResponseRedirect(reverse('yc_app:index'))

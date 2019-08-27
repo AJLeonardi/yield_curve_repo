@@ -4,10 +4,31 @@
 
     <section class="grey-text text-darken-3 valign-wrapper">
         <div class="container ">
-            <div class="row"></div>
             <div class="row">
-                <h2 class="center no-margin large-padding">{{ yd_inversion_string_short }}</h2>
             </div>
+            <div class="row">
+                <h6>Fetch Daily Treasury Yield Curve Data</h6>
+            </div>
+            <form action="{% url 'yc_app:fetch_data' %}" method="post" >
+                {% csrf_token %}
+                <div class="row">
+                    <div class='input-field col s12 m4'>
+                        <label for = 'id_year'>Year: </label>
+                        {{form.year}}
+                    </div>
+                    <div class='input-field col s12 m4'>
+                        <label for = 'id_month'>Month: </label>
+                        {{form.month}}
+                    </div>
+                    <div class='input-field col s12 m4'>
+                        <label for = 'id_day'>Day: </label>
+                        {{form.day}}
+                    </div>
+                </div>
+                <div class="">
+                    <input type="submit" value="Fetch Data" class='btn btn-primary' />
+                </div>
+            </form>
             <div class="row"></div>
         </div>
     </section>
