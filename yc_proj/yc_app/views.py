@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.core.urlresolvers import reverse
 from yc_app import helpers
 from django.utils import timezone
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views import View
 
 
 def get_context(request, yd):
@@ -15,7 +17,7 @@ def get_context(request, yd):
         next_yd = yd.get_next_by_date()
         context['is_latest_yd'] = False
         context['next_yd_url'] = next_yd.get_absolute_url()
-    except yc_app.models.YieldData.DoesNotExist:
+    except (AttributeError, yc_app.models.YieldData.DoesNotExist):
         context['next_yd_url'] = "#"
         context['is_latest_yd'] = True
 
@@ -23,12 +25,15 @@ def get_context(request, yd):
         prev_yd = yd.get_previous_by_date()
         context['is_first_yd'] = False
         context['prev_yd_url'] = prev_yd.get_absolute_url()
-    except yc_app.models.YieldData.DoesNotExist:
+    except (AttributeError, yc_app.models.YieldData.DoesNotExist):
         context['prev_yd_url'] = "#"
         context['is_first_yd'] = True
-
-    context['yd_inversion_string_short'] = yd.yd_inversion_string_short()
-    context['yd_comp_grid'] = yd.get_comp_grid()
+    try:
+        context['yd_inversion_string_short'] = yd.yd_inversion_string_short()
+        context['yd_comp_grid'] = yd.get_comp_grid()
+    except AttributeError:
+        context['yd_inversion_string_short'] = ""
+        context['yd_comp_grid'] = ""
 
     return context
 
@@ -50,3 +55,13 @@ def daily_data(request, year, month, day):
         return HttpResponseRedirect(reverse('yc_app:daily_data', kwargs={'year': current_yd.date.strftime('%Y'),
                                                                          'month': current_yd.date.strftime('%m'),
                                                                          'day': current_yd.date.strftime('%d')}))
+
+
+class FetchTreasuryData(LoginRequiredMixin, View):
+
+    def get(self, request):
+        context = get_context(request, None)
+        return render(request, 'yc_app/fetch_treasury_data.html', context)
+
+    def post(self, request):
+        pass
