@@ -1,6 +1,6 @@
 from yc_app.models import YieldData, YieldComp
 import urllib.request
-import datetime
+from datetime import datetime
 from decimal import Decimal
 import datetime
 import xml.etree.ElementTree as ET
@@ -39,7 +39,9 @@ def get_yd_from_treasury(year, month=None, day=None ):
     for prop in root.iter('{http://schemas.microsoft.com/ado/2007/08/dataservices/metadata}properties'):
         yd = YieldData()
         yd.treasury_id = int(prop.find('d:Id', ns).text)
-        yd.date = datetime.strptime(prop.find("d:NEW_DATE", ns).text, "%Y-%m-%dT%H:%M:%S")
+        print('date')
+        print(prop.find("d:NEW_DATE", ns).text)
+        yd.date = datetime.datetime.strptime(prop.find("d:NEW_DATE", ns).text, "%Y-%m-%dT%H:%M:%S")
         yd.rate_type = "DTYCR"
 
         yd.source_url = url

@@ -2,20 +2,21 @@
 
 {% block contents %}
 
-    <div id='dashboard' class='row'>
-      <div  class="col s12">
-      </br>
-          <div class="row">
-            <div class="col s12">
-              <label for="CompDataOverTime" class='card-label'>
-                <span>Treasury Yield Comparison for {{ sty_label }} and {{ lty_label }}</span>
-              </label>
-              <div class="card-panel">
-                <canvas id="CompDataOverTime"></canvas>
-              </div>
-            </div>
+    <div id='dashboard' class='container'>
+        <div class="row"></div>
+        <div class="row">
+          <h5 class="no-margin large-padding">Treasury Yield Comparison for {{ sty_label }} and {{ lty_label }}</h5>
+        </div>
+        <div class="row">
+        <div class="col s12">
+          <!-- <label for="CompDataOverTime" class='card-label'>
+            <span>Treasury Yield Comparison for {{ sty_label }} and {{ lty_label }}</span>
+          </label> -->
+          <div class="card-panel">
+            <canvas id="CompDataOverTime"></canvas>
           </div>
-      </div>
+        </div>
+        </div>
     </div>
 
 {% endblock contents %}

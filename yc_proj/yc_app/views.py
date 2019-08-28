@@ -13,7 +13,9 @@ from django.views import View
 def get_context(request, yd):
     context = {"title": "State of The Yield Curve",
                "description": "The state of the yield curve for this date",
-               'yd': yd,}
+               'obj': yd,
+               'is_comp': False,
+               }
     try:
         next_yd = yd.get_next_by_date()
         context['is_latest_yd'] = False
@@ -58,12 +60,11 @@ def daily_data(request, year, month, day):
                                                                          'day': current_yd.date.strftime('%d')}))
 
 
-def comp_page(request, comp_id, **kwargs):
-    if 'range' in kwargs:
-        date_range = kwargs['range']
-    else:
-        date_range = 365
+def comp_page(request, comp_id):
+    date_range = int(request.GET.get('date_range', '365'))
     sty_label, lty_label, chart_list = helpers.get_comp_chart_list(comp_id, date_range)
+    comp = chart_list[-1:][0]
+    # daily_yd = comp.yield_data.get_absolute_url()
     chart_data = []
     for comp in chart_list:
         comp_tup = comp.date.strftime("%m/%d/%Y"), comp.yield_comp_difference
@@ -73,9 +74,14 @@ def comp_page(request, comp_id, **kwargs):
         "chart_data": chart_data,
         "sty_label": sty_label,
         "lty_label": lty_label,
+        "obj": comp,
+        "title": "Yield Comparison " + sty_label + ":" + lty_label,
+        'daily_data_url': comp.yield_data.get_absolute_url(),
+        "description": "The comparison of the " + sty_label + " and " + lty_label
+                       + "yields. A negative value here shows an inversion of the yield curve.",
+        'is_comp': True,
     }
     return render(request, 'yc_app/comp_chart.html', context)
-
 
 
 class FetchTreasuryData(LoginRequiredMixin, View):

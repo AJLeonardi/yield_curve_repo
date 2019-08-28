@@ -14,19 +14,19 @@
         <div class="container border-top">
             <div class="row"></div>
             <div class="row">
-                <h5 class="no-margin large-padding">{{yd.get_rate_type_display}}</h5>
+                <h5 class="no-margin large-padding">{{obj.get_rate_type_display}}</h5>
             </div>
             <div class="row">
-                {% for d in yd.yield_data_tup_list %}
+                {% for d in obj.yield_data_tup_list %}
                     <div class="center col s1 strong">{{ d.0 }}</div>
                 {% endfor %}
             </div>
             <div class="row">
-                {% for d in yd.yield_data_tup_list %}
+                {% for d in obj.yield_data_tup_list %}
                     <div class="center col s1">{{ d.1 }}</div>
                 {% endfor %}
             </div>
-            <span class="helper-text right"><a href="{{ yd.source_url }}">**Source: {{ yd.data_source }}</a></span>
+            <span class="helper-text right"><a href="{{ obj.source_url }}">**Source: {{ obj.data_source }}</a></span>
             <div class="row"></div>
         </div>
     </section>

@@ -42,7 +42,7 @@ footer p a:hover{
 }
 
 .inverted-yc-comp a{
-    color: red !important;
+    color: red;
 }
 .even-yc-comp a{
     /*color: yellow;*/
@@ -51,13 +51,13 @@ footer p a:hover{
     color: green;
 }
 .inverted-yc-comp a:hover{
-    color: #039be5;
+    font-weight: bolder;
 }
 .even-yc-comp a:hover{
-    color: #039be5;
+    font-weight: bolder;
 }
 .normal-yc-comp a:hover{
-    color: #039be5;
+    font-weight: bolder;
 }
 .na-yc-comp{
     color: #cfd8dc;
@@ -132,18 +132,24 @@ color: blue;
       <div class="navbar-fixed">
         <nav class='light-blue darken-4'>
           <div class="nav-wrapper">
-              <a href="" class="brand-logo center hide-on-small-only grey-text text-lighten-3">{{yd.date|date:'M d, Y'}}</a>
-              <a href="" class="brand-logo center hide-on-med-and-up grey-text text-lighten-3">{{yd.date|date:'n/d/y'}}</a>
+              <a href="" class="brand-logo center hide-on-small-only grey-text text-lighten-3">{{obj.date|date:'M d, Y'}}</a>
+              <a href="" class="brand-logo center hide-on-med-and-up grey-text text-lighten-3">{{obj.date|date:'n/d/y'}}</a>
               <ul class="left">
                   <li>
-                    <a class='btn btn-small {% if is_first_yd %}disabled{% endif %}' href="{{ prev_yd_url }}">< Prev</a>
+                  {% if is_comp %}
+                    <a class='btn btn-small {% if is_first_yd %}disabled{% endif %}' href="{{ daily_data_url }}">< Daily Data</a>
+                  {% else %}
+                      <a class='btn btn-small {% if is_first_yd %}disabled{% endif %}' href="{{ prev_yd_url }}">< Prev</a>
+                  {% endif %}
                   </li>
               </ul>
+          {% if not is_comp %}
               <ul class="right">
                   <li>
                     <a class='btn btn-small {% if is_latest_yd %}disabled{% endif %}' href="{{ next_yd_url }}">Next ></a>
                   </li>
               </ul>
+          {% endif %}
           </div>
         </nav>
       </div>
