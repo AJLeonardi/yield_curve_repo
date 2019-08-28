@@ -23,13 +23,11 @@ def get_yd_by_date(date):
 
 
 def get_yd_from_treasury(year, month=None, day=None ):
-    # ToDo: kwargs year month and day -- if none passed, just use today's date
     url = "https://data.treasury.gov/feed.svc/DailyTreasuryYieldCurveRateData?$filter=year(NEW_DATE)%20eq%20" + str(year)
     if month:
         url += "%20and%20month(NEW_DATE)%20eq%20" + str(month)
         if day:
             url += "%20and%20day(NEW_DATE)%20eq%20" + str(day)
-    print(url)
     response = urllib.request.urlopen(url).read()
     root = ET.fromstring(response)
     ns = {
@@ -39,8 +37,6 @@ def get_yd_from_treasury(year, month=None, day=None ):
     for prop in root.iter('{http://schemas.microsoft.com/ado/2007/08/dataservices/metadata}properties'):
         yd = YieldData()
         yd.treasury_id = int(prop.find('d:Id', ns).text)
-        print('date')
-        print(prop.find("d:NEW_DATE", ns).text)
         yd.date = datetime.datetime.strptime(prop.find("d:NEW_DATE", ns).text, "%Y-%m-%dT%H:%M:%S")
         yd.rate_type = "DTYCR"
 
