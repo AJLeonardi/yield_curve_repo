@@ -80,6 +80,7 @@ def comp_page(request, comp_id):
         "description": "The comparison of the " + sty_label + " and " + lty_label
                        + "yields. A negative value here shows an inversion of the yield curve.",
         'is_comp': True,
+        'date_range': date_range,
     }
     return render(request, 'yc_app/comp_chart.html', context)
 

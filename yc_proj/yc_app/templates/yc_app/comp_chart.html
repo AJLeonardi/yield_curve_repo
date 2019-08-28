@@ -9,9 +9,9 @@
         </div>
         <div class="row">
         <div class="col s12">
-          <!-- <label for="CompDataOverTime" class='card-label'>
-            <span>Treasury Yield Comparison for {{ sty_label }} and {{ lty_label }}</span>
-          </label> -->
+          <label for="CompDataOverTime" class='card-label'>
+              <span><a href="{% url 'yc_app:comp_chart' obj.pk %}" {% if date_range == 365 %}class="disabled-link" disabled{% endif %}>1 Year</a> | <a href="{% url 'yc_app:comp_chart' obj.pk %}?date_range=730" {% if date_range == 730 %}class="disabled-link" disabled{% endif %}>2 Year</a> | <a href="{% url 'yc_app:comp_chart' obj.pk %}?date_range=1825" {% if date_range == 1825 %}class="disabled-link" {% endif %}>5 Year</a> | <a {% if date_range != 3650 %}href="{% url 'yc_app:comp_chart' obj.pk %}?date_range=3650"{% endif %} {% if date_range == 3650 %}class="disabled-link"{% endif %}>10 Year</a></span>
+          </label>
           <div class="card-panel">
             <canvas id="CompDataOverTime"></canvas>
           </div>
