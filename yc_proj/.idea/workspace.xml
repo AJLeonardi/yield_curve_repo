@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2652df9-ea78-4d67-8d44-5aa81f4a210f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,8 +65,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="183" column="110" selection-start-line="183" selection-start-column="110" selection-end-line="183" selection-end-column="110" />
+                <state relative-caret-position="210">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
                 </state>
               </provider>
             </entry>
@@ -79,7 +75,7 @@
             <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/about.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="270">
-                  <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+                  <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -172,9 +168,9 @@
         <option value="$PROJECT_DIR$/yc_app/templates/yc_app/comp_chart.html" />
         <option value="$PROJECT_DIR$/yc_app/templates/yc_app/yc_data.html" />
         <option value="$PROJECT_DIR$/yc_app/urls.py" />
-        <option value="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" />
         <option value="$PROJECT_DIR$/yc_app/templates/yc_app/about.html" />
         <option value="$PROJECT_DIR$/yc_app/views.py" />
+        <option value="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" />
       </list>
     </option>
   </component>
@@ -298,12 +294,12 @@
       <workItem from="1566829469796" duration="1523000" />
       <workItem from="1566850182194" duration="2858000" />
       <workItem from="1566868688277" duration="9914000" />
-      <workItem from="1566909893792" duration="8312000" />
+      <workItem from="1566909893792" duration="8641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56052000" />
+    <option name="totallyTimeSpent" value="56381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1646" height="961" extended-state="0" />
@@ -427,14 +423,7 @@
     <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/about.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="183" column="110" selection-start-line="183" selection-start-column="110" selection-end-line="183" selection-end-column="110" />
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -445,6 +434,13 @@
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
