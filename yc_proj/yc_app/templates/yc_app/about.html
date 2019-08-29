@@ -1,0 +1,25 @@
+{% extends "yc_app/base.html" %}
+
+{% block contents %}
+
+    <section class="gray-text text-darken-3">
+        <div class="container ">
+            <div class="row"></div>
+            <div class="row">
+                <h4 class="no-margin large-padding">State of The Yield Curve</h4>
+            </div>
+            <div class="row">
+                <p class="">After several episodes of the <a href="https://www.npr.org/sections/money/" target="#">Planet Money Podcast</a> discussed the Yield Curve, it inspired me to dig a bit deeper into the what it is and the data behind it. When I googled around and found only news articles, I was a bit frustrated by the lack of utility. I decided to create a site which pulls the daily yield curve data from the US Treasury Website and provides a deeper context to that data.</p>
+                <p class="">The site will grow over time, but I'm starting out by presenting a couple key views:
+                    <ol>
+                        <li class="">A daily one-liner: "The Yield Curve is Inverted" and "The Yield Curve is Not Inverted" -- along with the daily yield curve data to support it.</li>
+                        <li class="">A daily "comparison grid" which displays each short term/long term comparison for the day. A negative comparison means that those values are "inverted."</li>
+                        <li class="">A historical trend for each term's yield, as well as each short term/long term comparison. So if you want to see how many times the 2yr:10yr comp has been inverted in the last 5 years, just click on that value in the grid!</li>
+                    </ol>
+                </p>
+                <p class="">If you would like to collaborate, contribute, provide feedback, or just think this thing is cool, please reach out to me on twitter <a href="https://twitter.com/SoTYieldCurve" target="#">@SoTYieldCurve</a>!</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock contents %}

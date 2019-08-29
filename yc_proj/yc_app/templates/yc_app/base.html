@@ -25,6 +25,13 @@
 
     {% block additional_header %}
     {% endblock additional_header %}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-7848161040097009",
+    enable_page_level_ads: true
+  });
+</script>
 
 <style>
 
@@ -173,8 +180,8 @@ color: blue;
         <h5 class="white-text">Quick Links</h5>
         <ul>
             <li><a class="grey-text text-lighten-3" href="{% url 'yc_app:index' %}" >Today's Yield Curve Rates</a></li>
-            <li><a class="grey-text text-lighten-3" href="" >About</a></li>
-            <li><a class="grey-text text-lighten-3" href="" >FAQs</a></li>
+            <li><a class="grey-text text-lighten-3" href="{% url 'yc_app:about_page' %}" >About</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://twitter.com/SoTYieldCurve" target="#">Tweet @SoTYieldCurve</a></li>
             <li><a class="grey-text text-lighten-3" href="">Privacy Policy</a></li>
         </ul>
       </div>

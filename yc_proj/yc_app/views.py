@@ -98,3 +98,11 @@ class FetchTreasuryData(LoginRequiredMixin, View):
             helpers.get_yd_from_treasury(form.cleaned_data['year'], month=form.cleaned_data['month'],
                                          day=form.cleaned_data['day'])
         return HttpResponseRedirect(reverse('yc_app:index'))
+
+
+def about_page(request):
+    context= {
+        'daily_data_url': "https://stateoftheyieldcurve.com", # TODO: use reverse on index instead.
+        'is_comp': True,
+    }
+    return render(request, 'yc_app/about.html', context)
