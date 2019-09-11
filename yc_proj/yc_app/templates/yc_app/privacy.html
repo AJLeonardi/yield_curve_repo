@@ -1,0 +1,60 @@
+{% extends "yc_app/base.html" %}
+
+{% block contents %}
+
+    <section class="gray-text text-darken-3">
+        <div class="container ">
+            <div class="row"></div>
+            <div class="row">
+                <h5 class="no-margin large-padding">Privacy Notice</h5>
+            </div>
+            <div class="row">
+                <p>This privacy notice discloses the privacy practices for <a href="{% url "yc_app:index" %}">StateOfTheYieldCurve.com</a>. This privacy notice applies solely to information collected by this website. It will notify you of the following:</p>
+                <ul class="browser-default">
+                    <li>What personally identifiable information is collected from you through the website, how it is used and with whom it may be shared.</li>
+                    <li>What choices are available to you regarding the use of your data.</li>
+                    <li>The security procedures in place to protect the misuse of your information.</li>
+                    <li>How you can correct any inaccuracies in the information.</li>
+                </ul>
+            </div>
+            <div class="row">
+                <h5 class="no-margin large-padding">Information Collection, Use, and Sharing</h5>
+            </div>
+            <div class="row">
+                <p>We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email, twitter, or other direct contact from you. We will not sell or rent this information to anyone.</p>
+                <p>We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request.</p>
+                <p>Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.</p>
+                <p>We use "cookies" on this site. A cookie is a piece of data stored on a site visitor's hard drive to help us improve your access to our site and identify repeat visitors to our site. Cookies also enable us to aggregate overall trends of use on the site (e.g.  which pages and features are used most heavily) so we can enhance the experience for our visitors. Usage of a cookie is in no way linked to any personally identifiable information on our site.</p>
+                <p>To provide further detail about aggregate visitor trends, we use a tool called Google Analytics which also uses cookies to collect aggregate data about how visitors reach our site (e.g. device type, browser, language, estimated geographic region, etc). This helps us ensure our site is readable and functional for all of our visitors. However, we have no access to or control over these cookies. You may, however, opt out of all google cookies using <a href="https://tools.google.com/dlpage/gaoptout">this tool</a> which they provide.</p>
+            </div>
+            <div class="row">
+                <h5 class="no-margin large-padding">Your Access to and Control Over Information</h5>
+            </div>
+            <div class="row">
+                <p>You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the twitter account provided on our website:</p>
+                <ul class="browser-default">
+                    <li>See what data we have about you, if any.</li>
+                    <li>Change/correct any data we have about you.</li>
+                    <li>Have us delete any data we have about you.</li>
+                    <li>Express any concern you have about our use of your data.</li>
+                </ul>
+            </div>
+            <div class="row">
+                <h5 class="no-margin large-padding">Links</h5>
+            </div>
+            <div class="row">
+                <p>This website contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information.</p>
+            </div>
+            <div class="row">
+                <h5 class="no-margin large-padding">Security</h5>
+            </div>
+            <div class="row">
+                <p>We take precautions to protect your information.</p>
+                <p>All information is encrypted and transmitted to us in a secure way. You can verify this by looking for a lock icon in the address bar and looking for "https" at the beginning of the address of the Web page.</p>
+                <p>No personally identifiable information is captured by <a href="{% url 'yc_app:index' %}">StateOfTheYieldCurve.com</a>. That said, the servers in which we store data are kept in a secure environment.</p>
+                <p class="strong">If you feel that we are not abiding by this privacy policy, you should contact us immediately via twitter at <a href="https://twitter.com/SoTYieldCurve" target="#">@SoTYieldCurve</a>.</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock contents %}

@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2652df9-ea78-4d67-8d44-5aa81f4a210f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/privacy.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/yc_proj.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yc_proj.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc_app/sitemaps.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/sitemaps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc_app/templates/yc_app/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yc_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,14 +19,14 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.45862553">
+    <splitter split-orientation="horizontal" split-proportion="0.44922426">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/yc_app/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+                <state relative-caret-position="255">
+                  <caret line="17" column="67" lean-forward="true" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
                   </folding>
@@ -45,7 +46,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/yc_proj/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
+                <state relative-caret-position="309">
                   <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
                   <folding>
                     <element signature="e#641#682#0" expanded="true" />
@@ -54,35 +55,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/yc_app/forms.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-                  <folding>
-                    <element signature="e#0#24#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/yc_app/helpers.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
-                  <folding>
-                    <element signature="e#0#46#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2473">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                <state relative-caret-position="165">
+                  <caret line="198" column="100" selection-start-line="198" selection-start-column="100" selection-end-line="198" selection-end-column="100" />
                 </state>
               </provider>
             </entry>
@@ -90,8 +67,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/about.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="385" selection-start-line="11" selection-start-column="385" selection-end-line="11" selection-end-column="385" />
                 </state>
               </provider>
             </entry>
@@ -99,7 +76,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/comp_chart.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
+                <state relative-caret-position="148">
                   <caret line="12" column="693" selection-start-line="12" selection-start-column="693" selection-end-line="12" selection-end-column="693" />
                 </state>
               </provider>
@@ -154,11 +131,20 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/yc_app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="355">
-                  <caret line="105" column="155" selection-start-line="105" selection-start-column="155" selection-end-line="105" selection-end-column="155" />
+                <state relative-caret-position="402">
+                  <caret line="118" column="99" selection-start-line="118" selection-start-column="99" selection-end-line="118" selection-end-column="99" />
                   <folding>
                     <element signature="e#0#15#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/privacy.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -200,14 +186,15 @@
         <option value="$PROJECT_DIR$/yc_app/helpers.py" />
         <option value="$PROJECT_DIR$/yc_app/templates/yc_app/comp_chart.html" />
         <option value="$PROJECT_DIR$/yc_app/templates/yc_app/yc_data.html" />
-        <option value="$PROJECT_DIR$/yc_app/templates/yc_app/about.html" />
-        <option value="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" />
         <option value="$PROJECT_DIR$/yc_app/forms.py" />
         <option value="$PROJECT_DIR$/yc_proj/settings.py" />
         <option value="$PROJECT_DIR$/yc_proj/urls.py" />
-        <option value="$PROJECT_DIR$/yc_app/urls.py" />
         <option value="$PROJECT_DIR$/yc_app/admin.py" />
         <option value="$PROJECT_DIR$/yc_app/sitemaps.py" />
+        <option value="$PROJECT_DIR$/yc_app/urls.py" />
+        <option value="$PROJECT_DIR$/yc_app/templates/yc_app/about.html" />
+        <option value="$PROJECT_DIR$/yc_app/templates/yc_app/privacy.html" />
+        <option value="$PROJECT_DIR$/yc_app/templates/yc_app/base.html" />
         <option value="$PROJECT_DIR$/yc_app/views.py" />
       </list>
     </option>
@@ -334,12 +321,12 @@
       <workItem from="1566850182194" duration="2858000" />
       <workItem from="1566868688277" duration="9914000" />
       <workItem from="1566909893792" duration="12574000" />
-      <workItem from="1568140232839" duration="1269000" />
+      <workItem from="1568140232839" duration="4522000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61583000" />
+    <option name="totallyTimeSpent" value="64836000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -354,7 +341,7 @@
     <frame x="20" y="23" width="1646" height="961" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1159601" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1159601" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -363,7 +350,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32978722" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -381,26 +368,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/yc_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yc_proj/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding>
-            <element signature="e#641#682#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yc_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -418,13 +385,6 @@
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/comp_chart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="693" selection-start-line="12" selection-start-column="693" selection-end-line="12" selection-end-column="693" />
         </state>
       </provider>
     </entry>
@@ -466,13 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yc_app/sitemaps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -483,17 +436,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/yc_proj/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="e#641#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yc_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="67" lean-forward="true" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/comp_chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="12" column="693" selection-start-line="12" selection-start-column="693" selection-end-line="12" selection-end-column="693" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="385" selection-start-line="11" selection-start-column="385" selection-end-line="11" selection-end-column="385" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/privacy.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/yc_app/templates/yc_app/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2473">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="165">
+          <caret line="198" column="100" selection-start-line="198" selection-start-column="100" selection-end-line="198" selection-end-column="100" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yc_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="105" column="155" selection-start-line="105" selection-start-column="155" selection-end-line="105" selection-end-column="155" />
+        <state relative-caret-position="402">
+          <caret line="118" column="99" selection-start-line="118" selection-start-column="99" selection-end-line="118" selection-end-column="99" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

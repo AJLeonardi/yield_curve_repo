@@ -100,11 +100,22 @@ class FetchTreasuryData(LoginRequiredMixin, View):
         return HttpResponseRedirect(reverse('yc_app:index'))
 
 
-def about_page(request):
-    context= {
-        "title": "State of The Yield Curve - About",
-        'description': "The State Of The Yield Curve provides daily details on the US treasury Yield Curve and the context around that single data point.",
+def get_static_context(request, page_name, description):
+    return {
+        "title": "State of The Yield Curve - " + page_name,
+        'description': description,
         'daily_data_url': reverse('yc_app:index'),
         'is_comp': True,
-    }
+        }
+
+
+def about_page(request):
+    context = get_static_context(request, 'About', "The State of The Yield Curve provides daily details on the US treasury Yield Curve and the context around that single data point.")
+
     return render(request, 'yc_app/about.html', context)
+
+
+def privacy_policy(request):
+    context = get_static_context(request, 'Privacy', "The State of The Yield Curve's Privacy Notice.")
+
+    return render(request, 'yc_app/privacy.html', context)
