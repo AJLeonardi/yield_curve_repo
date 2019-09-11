@@ -5,6 +5,7 @@ from yc_app.models import YieldComp, YieldData
 class YieldDataSitemap(sitemaps.Sitemap):
     priority = 0.9
     changefreq = 'daily'
+    limit = 50000
 
     def items(self):
         return YieldData.objects.all()

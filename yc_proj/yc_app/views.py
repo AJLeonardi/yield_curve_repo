@@ -102,7 +102,9 @@ class FetchTreasuryData(LoginRequiredMixin, View):
 
 def about_page(request):
     context= {
-        'daily_data_url': "https://stateoftheyieldcurve.com", # TODO: use reverse on index instead.
+        "title": "State of The Yield Curve - About",
+        'description': "The State Of The Yield Curve provides daily details on the US treasury Yield Curve and the context around that single data point.",
+        'daily_data_url': reverse('yc_app:index'),
         'is_comp': True,
     }
     return render(request, 'yc_app/about.html', context)
