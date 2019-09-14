@@ -209,7 +209,8 @@ color: blue;
   <div class="footer-copyright">
     <div class="container">
         © 2019 Copyright <i>The Dev Lunchbox</i>
-      <a class="grey-text text-lighten-4 right" href="#!">(v1)</a>
+        {% load yc_app_extras %}
+      <a class="grey-text text-lighten-4 right" href="#!">(v{% yc_app_version %})</a>
     </div>
   </div>
 </footer>
