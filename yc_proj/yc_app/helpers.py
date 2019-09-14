@@ -63,7 +63,13 @@ def get_yd_from_treasury(year, month=None, day=None ):
         yd.five_year_yield = Decimal(prop.find('d:BC_5YEAR', ns).text)
         yd.seven_year_yield = Decimal(prop.find('d:BC_7YEAR', ns).text)
         yd.ten_year_yield = Decimal(prop.find('d:BC_10YEAR', ns).text)
-        yd.twenty_year_yield = Decimal(prop.find('d:BC_20YEAR', ns).text)
+
+        twentyyy = prop.find('d:BC_20YEAR', ns).text
+        if twentyyy:
+            yd.twenty_year_yield = Decimal(twentyyy)
+        else:
+            yd.twenty_year_yield = None
+
         yd.thirty_year_yield = Decimal(prop.find('d:BC_30YEAR', ns).text)
 
         yd.is_inverted = yd.determine_if_inverted()
