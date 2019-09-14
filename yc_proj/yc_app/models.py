@@ -162,7 +162,7 @@ class YieldData(models.Model):
 class YieldComp(models.Model):
     yield_data = models.ForeignKey(YieldData, related_name="yield_comps")
     date = models.DateTimeField('Date for Treasury Yield Data')
-    rate_type = models.CharField(max_length=4, default="DTYCR", choices=TYPE_CHOICES)
+    rate_type = models.CharField(max_length=6, default="DTYCR", choices=TYPE_CHOICES)
     source_url = models.URLField(max_length=250, null=True, blank=True)
 
     long_term_yield_value = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
