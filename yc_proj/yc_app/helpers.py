@@ -42,7 +42,6 @@ def get_yd_from_treasury(year, month=None, day=None ):
 
         yd.source_url = url
 
-        # ToDo: sometimes these are null. so this needs to accommodate for that.
         omy = prop.find('d:BC_1MONTH', ns).text
         if omy:
             yd.one_month_yield = Decimal(omy)
@@ -55,14 +54,53 @@ def get_yd_from_treasury(year, month=None, day=None ):
         else:
             yd.two_month_yield = None
 
-        yd.three_month_yield = Decimal(prop.find('d:BC_3MONTH', ns).text)
-        yd.six_month_yield = Decimal(prop.find('d:BC_6MONTH', ns).text)
-        yd.one_year_yield = Decimal(prop.find('d:BC_1YEAR', ns).text)
-        yd.two_year_yield = Decimal(prop.find('d:BC_2YEAR', ns).text)
-        yd.three_year_yield = Decimal(prop.find('d:BC_3YEAR', ns).text)
-        yd.five_year_yield = Decimal(prop.find('d:BC_5YEAR', ns).text)
-        yd.seven_year_yield = Decimal(prop.find('d:BC_7YEAR', ns).text)
-        yd.ten_year_yield = Decimal(prop.find('d:BC_10YEAR', ns).text)
+        threemy = prop.find('d:BC_3MONTH', ns).text
+        if threemy:
+            yd.three_month_yield = Decimal(threemy)
+        else:
+            yd.three_month_yield = None
+
+        sixmy = prop.find('d:BC_6MONTH', ns).text
+        if sixmy:
+            yd.six_month_yield = Decimal(sixmy)
+        else:
+            yd.six_month_yield = None
+
+        oneyy = prop.find('d:BC_1YEAR', ns).text
+        if oneyy:
+            yd.one_year_yield = Decimal(oneyy)
+        else:
+            yd.one_year_yield = None
+
+        twoyy = prop.find('d:BC_2YEAR', ns).text
+        if twoyy:
+            yd.two_year_yield = Decimal(twoyy)
+        else:
+            yd.two_year_yield = None
+
+        threeyy = prop.find('d:BC_3YEAR', ns).text
+        if threeyy:
+            yd.three_year_yield = Decimal(threeyy)
+        else:
+            yd.three_year_yield = None
+
+        fiveyy = prop.find('d:BC_5YEAR', ns).text
+        if fiveyy:
+            yd.five_year_yield = Decimal(fiveyy)
+        else:
+            yd.five_year_yield = None
+
+        sevenyy = prop.find('d:BC_7YEAR', ns).text
+        if sevenyy:
+            yd.seven_year_yield = Decimal(sevenyy)
+        else:
+            yd.seven_year_yield = None
+
+        tenyy = prop.find('d:BC_10YEAR', ns).text
+        if tenyy:
+            yd.ten_year_yield = Decimal(tenyy)
+        else:
+            yd.ten_year_yield = None
 
         twentyyy = prop.find('d:BC_20YEAR', ns).text
         if twentyyy:
