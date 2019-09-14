@@ -166,10 +166,10 @@ class YieldComp(models.Model):
     source_url = models.URLField(max_length=250, null=True, blank=True)
 
     long_term_yield_value = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    long_term_yield_label = models.CharField(max_length=2)
+    long_term_yield_label = models.CharField(max_length=4)
 
     short_term_yield_value = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    short_term_yield_label = models.CharField(max_length=2)
+    short_term_yield_label = models.CharField(max_length=4)
 
     yield_comp_difference = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
 
