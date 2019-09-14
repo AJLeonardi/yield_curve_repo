@@ -70,7 +70,11 @@ def get_yd_from_treasury(year, month=None, day=None ):
         else:
             yd.twenty_year_yield = None
 
-        yd.thirty_year_yield = Decimal(prop.find('d:BC_30YEAR', ns).text)
+        thirtyyy = prop.find('d:BC_30YEAR', ns).text
+        if thirtyyy:
+            yd.thirty_year_yield = Decimal(thirtyyy)
+        else:
+            yd.thirty_year_yield = None
 
         yd.is_inverted = yd.determine_if_inverted()
 
