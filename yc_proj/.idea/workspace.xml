@@ -2,88 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2652df9-ea78-4d67-8d44-5aa81f4a210f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Static/admin/css/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/css/changelists.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/css/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/css/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/css/forms.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/css/rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/css/widgets.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/fonts/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/fonts/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/fonts/Roboto-Bold-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/fonts/Roboto-Light-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/fonts/Roboto-Regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/calendar-icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/gis/move_vertex_off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/gis/move_vertex_on.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-addlink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-alert.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-changelink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-deletelink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-no.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-unknown-alt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-unknown.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/icon-yes.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/inline-delete.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/selector-icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/sorting-icons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/tooltag-add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/img/tooltag-arrowright.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/SelectBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/SelectFilter2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/actions.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/calendar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/cancel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/change_form.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/collapse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/collapse.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/core.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/inlines.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/inlines.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/jquery.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/popup_response.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/prepopulate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/prepopulate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/prepopulate_init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/timeparse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/urlify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/css/print.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/css/toolbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/img/ajax-loader.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/img/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/img/back_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/img/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/img/close_hover.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/img/djdt_vertical.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/img/indicator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/js/redirect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/js/toolbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/js/toolbar.profiling.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/js/toolbar.sql.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Static/debug_toolbar/js/toolbar.timer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc_proj/old.settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc_proj/settings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc_proj/settings/base.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc_proj/settings/dev.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yc_proj/settings/prod.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc_proj/settings/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_proj/settings/prod.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +126,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

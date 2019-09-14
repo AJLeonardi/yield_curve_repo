@@ -17,3 +17,5 @@ DATABASES = {
         'PORT': get_secret_setting('DATABASE_PORT'),
     }
 }
+
+STATIC_ROOT = 'static'
