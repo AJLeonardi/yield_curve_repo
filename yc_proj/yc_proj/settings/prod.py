@@ -5,7 +5,7 @@ APP_VERSION = "1.0"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['StateOfTheYieldCurve.com', 'www.StateOfTheYieldCurve.com']
+ALLOWED_HOSTS = ['198.199.74.243', '127.0.0.1', 'StateOfTheYieldCurve.com', 'www.StateOfTheYieldCurve.com']
 
 DATABASES = {
     'default': {
