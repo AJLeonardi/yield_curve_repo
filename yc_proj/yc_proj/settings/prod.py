@@ -15,6 +15,7 @@ DATABASES = {
         'PASSWORD': get_secret_setting('DATABASE_PASSWORD'),
         'HOST': get_secret_setting('DATABASE_HOST'),
         'PORT': get_secret_setting('DATABASE_PORT'),
+        'OPTIONS': {'sslmode': 'require'},
     }
 }
 
