@@ -23,10 +23,12 @@
             </div>
             <div class="row">
                 {% for d in obj.yield_data_tup_list %}
-                    <div class="center col s1">{{ d.1 }}</div>
+                    <div class="center col s1">{{ d.1|default_if_none:'N/A' }}</div>
                 {% endfor %}
             </div>
             <span class="helper-text right"><a href="{{ obj.source_url }}">**Source: {{ obj.data_source }}</a></span>
+            <div class="row"></div>
+            <canvas id="YCChart"></canvas>
             <div class="row"></div>
         </div>
     </section>
@@ -55,3 +57,67 @@
 
 
 {% endblock contents %}
+{% block additional_js %}
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js'></script>
+<script>
+    var color = {%  if obj.is_inverted == True %}'red'{% else %}'green'{% endif %};
+    var yc_chart_config = {
+			type: 'line',
+			data: {
+			    labels: [{% for d in obj.yield_data_tup_list %}'{{d.0}}',{% endfor %}],
+				datasets: [{
+					label: "Yield Curve",
+					data: [{% for d in obj.yield_data_tup_list %}{{d.1|default_if_none:""}},{% endfor %}],
+					type: 'line',
+					pointRadius: 0,
+					fill: false,
+					lineTension: 0,
+					borderWidth: 2,
+                    backgroundColor: color,
+                    borderColor: color,
+				}]
+			},
+			options: {
+			    legend:{
+			        display: false,
+                },
+                spanGaps: true,
+			    aspectRatio: 4,
+				scales: {
+					xAxes: [{
+						type: 'category',
+						distribution: 'series',
+						ticks: {
+							source: 'data',
+							autoSkip: true
+						}
+					}],
+					yAxes: [{
+						scaleLabel: {
+							display: true,
+							labelString: 'Yield'
+						}
+					}]
+				},
+				tooltips: {
+					intersect: false,
+					mode: 'index',
+					callbacks: {
+						label: function(tooltipItem, myData) {
+							var label = myData.datasets[tooltipItem.datasetIndex].label || '';
+							if (label) {
+								label += ': ';
+							}
+							label += parseFloat(tooltipItem.value).toFixed(2);
+							return label;
+						}
+					}
+				}
+			}
+		};
+
+    var ctx = document.getElementById("YCChart").getContext('2d');
+    var myChart = new Chart(ctx, yc_chart_config);
+
+    </script>
+{% endblock additional_js %}

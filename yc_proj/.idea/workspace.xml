@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b2652df9-ea78-4d67-8d44-5aa81f4a210f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yc_proj/settings/prod.py" beforeDir="false" afterPath="$PROJECT_DIR$/yc_proj/settings/prod.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yc_app/templates/yc_app/yc_data.html" beforeDir="false" afterPath="$PROJECT_DIR$/yc_app/templates/yc_app/yc_data.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,19 +13,6 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>url</find>
-      <find>bt_app</find>
-      <find>h2</find>
-      <find>home</find>
-      <find>day</find>
-      <find>yd</find>
-      <find>disabled</find>
-      <find>print</find>
-      <find>yd.</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -109,6 +96,7 @@
       <workItem from="1568461014542" duration="29000" />
       <workItem from="1568461128030" duration="146000" />
       <workItem from="1568461419905" duration="882000" />
+      <workItem from="1569592046984" duration="3137000" />
     </task>
     <servers />
   </component>
