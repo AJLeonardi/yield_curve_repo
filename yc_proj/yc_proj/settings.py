@@ -21,6 +21,9 @@ APP_VERSION = "1.0"
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+
+# Secret key below was NOT used in any environment. This Settings File is legacy from before app settings became federated around environments using the /settings module.
+# New Secret Keys were created for each environment and stored in secrets.json on those environments.
 SECRET_KEY = 'sg&^eji*h@9dlmcsc45tfn9j0u!ouj40yhn)eqm2@0iaf3(^c2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
