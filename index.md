@@ -1,9 +1,5 @@
 # State of the Yield Curve
-Initially I built this application because I wanted a simple way to know whether the US Treasury Yield Curve was inverted or not on any given day (this wasn't easily available at the time). As I built it out, though, I added additional features to provide more comprehensive insight into not just whether it was inverted, but also how and to what extent. 
-
-Ultimately I added a drill down to show the history of specific yield comparisons. As an example clicking on the value for a given day's difference between the 3 month and 10 year yields (the Diamond Cross) would bring you to a page which shows a chart of the daily differences for the past 20 years - visually highlighting periods of health and inversion.
-
-For more information check out the demo video below (just 2.5 minutes).
+I built this application because I wanted a simple way to know whether the US Treasury Yield Curve was inverted or not on any given day (this wasn't easily available at the time). As I built it out I added additional features including more comprehensive insight into not just whether it was inverted, but also how and to what extent and a drill down which shows the history of specific yield comparisons. See the end result below!
 
 *This application was originally hosted at StateOfTheYieldCurve.com, but has since been taken down.*
 
